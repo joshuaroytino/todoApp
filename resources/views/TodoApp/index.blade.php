@@ -4,7 +4,7 @@
     <h1>TodoApp index view</h1>
     <div class="row">
         <div class="col-md-4">
-            <input class="form-control" type="text" ng-model="todo.title">
+            <input type="text" ng-model="todo.title">
             <button class="btn btn-primary btn-md" ng-click="addTodo()">Add</button>
             <i ng-show="loading" class="fa fa-spinner fa-spin"></i>
         </div>
