@@ -14,7 +14,7 @@
 		<div class="col-md-4">
 			<table class="table table-striped">
 				<tr ng-repeat='todo in todos'>
-					<td><input type="checkbox" ng-true-value="1" ng-false-value="'0'" ng-model="todo.done" ng-change="updateTodo(todo)"></td>
+					<td><input type="checkbox" ng-true-value="1" ng-false-value="0" ng-model="todo.done" ng-change="updateTodo(todo)"></td>
 					<td><% todo.title %></td>
 					<td><button class="btn btn-danger btn-xs" ng-click="deleteTodo($index)">  <span class="glyphicon glyphicon-trash" ></span></button></td>
 				</tr>

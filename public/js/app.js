@@ -14,7 +14,6 @@ app.controller('todoController', function($scope, $http) {
             success(function(data, status, headers, config) {
                 $scope.todos = data;
                 $scope.loading = false;
-
             });
     }
 
@@ -23,7 +22,7 @@ app.controller('todoController', function($scope, $http) {
 
         $http.post('/api/todos', {
             title: $scope.todo.title,
-            done: $scope.todo.done
+            done: false
         }).success(function(data, status, headers, config) {
             $scope.todos.push(data);
             $scope.todo = '';
