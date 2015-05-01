@@ -1,6 +1,7 @@
 var app = angular.module('todoApp', [], function($interpolateProvider) {
     $interpolateProvider.startSymbol('<%');
     $interpolateProvider.endSymbol('%>');
+    $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
 });
 
 app.controller('todoController', function($scope, $http) {
@@ -22,7 +23,7 @@ app.controller('todoController', function($scope, $http) {
 
         $http.post('/api/todos', {
             title: $scope.todo.title,
-            done: false
+            done: $scope.todo.done
         }).success(function(data, status, headers, config) {
             $scope.todos.push(data);
             $scope.todo = '';
