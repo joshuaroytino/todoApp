@@ -21,3 +21,4 @@ Route::controllers([
 ]);
 
 Route::resource('api/todos', 'TodosController');
+Route::get('todoapp', 'TodoAppController@index');
