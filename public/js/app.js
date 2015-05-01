@@ -1,7 +1,6 @@
 var app = angular.module('todoApp', [], function($interpolateProvider) {
     $interpolateProvider.startSymbol('<%');
     $interpolateProvider.endSymbol('%>');
-    $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
 });
 
 app.controller('todoController', function($scope, $http) {
