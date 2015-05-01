@@ -6,7 +6,7 @@
         <div class="col-md-4">
             <input type="text" ng-model="todo.title">
             <button class="btn btn-primary btn-md" ng-click="addTodo()">Add</button>
-            <i ng-show="loading" class="fat fa-spinner fa-spin"></i>
+            <i ng-show="loading" class="fa fa-spinner fa-spin"></i>
         </div>
     </div>
     <div class="row">
